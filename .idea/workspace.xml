@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="22efb80b-6a07-4589-b082-f6474cfdff48" name="Changes" comment="" />
+    <list default="true" id="22efb80b-6a07-4589-b082-f6474cfdff48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/automationexercise-java-selenium-cucumber-testng.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/ConfigReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/DriverFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/CustomerDataFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/CustomerInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/AccountCreatedPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/AccountInformationPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/MainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/SignUpLoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/ScreenshotUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/WaitUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/hooks/Hooks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runners/RunCucumberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/MainPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/stag.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/register-user.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/89b642cf-3049-4549-ad76-0a1355bb6f43-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b32d2594-aa10-42cc-baf0-5cd95cbb2223-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e39dd8df-255b-46fd-83b5-a51b67600480-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Selenium Cucumber Automation Exercise TestNG Suite/UI Regression Tests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Selenium Cucumber Automation Exercise TestNG Suite/UI Regression Tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/failed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.example.runners.RunCucumberTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/passed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/skipped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/config/dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/config/prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/config/stag.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/register-user.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,27 +80,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3GFTmHkbSw0S2Y0SWbboD9H0GAX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test/java-cucumber-testng-framework&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="22efb80b-6a07-4589-b082-f6474cfdff48" name="Changes" comment="" />
