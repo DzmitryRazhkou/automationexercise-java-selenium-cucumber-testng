@@ -1,0 +1,12 @@
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/constants/Constants.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/core/ConfigReader.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/core/DriverFactory.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/data/CustomerDataFactory.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/data/CustomerInfo.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/pages/AccountCreatedPage.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/pages/AccountInformationPage.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/pages/BasePage.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/pages/MainPage.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/pages/SignUpLoginPage.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/utils/ScreenshotUtils.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/main/java/org/example/utils/WaitUtils.java

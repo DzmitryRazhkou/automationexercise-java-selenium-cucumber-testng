@@ -1,0 +1,3 @@
+org/example/hooks/Hooks.class
+org/example/steps/MainPageSteps.class
+org/example/runners/RunCucumberTest.class
