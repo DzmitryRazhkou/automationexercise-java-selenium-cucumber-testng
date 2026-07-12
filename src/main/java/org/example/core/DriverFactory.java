@@ -67,10 +67,20 @@ public final class DriverFactory {
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
-        options.addArguments("--disable-notifications", "--disable-popup-blocking", "--disable-dev-shm-usage", "--no-sandbox");
+        options.addArguments(
+                "--disable-notifications",
+                "--disable-popup-blocking",
+                "--disable-dev-shm-usage",
+                "--no-sandbox"
+        );
 
         if (headless) {
-            options.addArguments("--headless=new", "--window-size=1920,1080");
+            options.addArguments(
+                    "--headless=new",
+                    "--window-size=1920,1080",
+                    "--disable-gpu",
+                    "--remote-allow-origins=*"
+            );
         }
 
         return new ChromeDriver(options);
