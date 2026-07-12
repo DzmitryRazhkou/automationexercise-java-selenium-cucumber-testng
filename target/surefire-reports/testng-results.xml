@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-12T16:49:52 CDT" name="Selenium Cucumber Automation Exercise TestNG Suite" finished-at="2026-07-12T16:49:59 CDT" duration-ms="7000">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.RunCucumberTest@7b36aa0c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-07-12T16:49:52 CDT" name="UI Regression Tests" finished-at="2026-07-12T16:49:59 CDT" duration-ms="7000">
+      <class name="org.example.runners.RunCucumberTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.RunCucumberTest@7b36aa0c]" started-at="2026-07-12T16:49:52 CDT" name="setUpClass" finished-at="2026-07-12T16:49:52 CDT" duration-ms="277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6be968ce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.RunCucumberTest@7b36aa0c]" started-at="2026-07-12T16:49:52 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-12T16:49:59 CDT" duration-ms="6683" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully register and delete a new user account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register a new user"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.RunCucumberTest@7b36aa0c]" started-at="2026-07-12T16:49:59 CDT" name="tearDownClass" finished-at="2026-07-12T16:49:59 CDT" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- org.example.runners.RunCucumberTest -->
+    </test> <!-- UI Regression Tests -->
+  </suite> <!-- Selenium Cucumber Automation Exercise TestNG Suite -->
+</testng-results>
