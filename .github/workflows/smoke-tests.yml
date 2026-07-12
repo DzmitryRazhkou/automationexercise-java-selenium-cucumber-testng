@@ -1,20 +1,10 @@
 name: Selenium Cucumber TestNG UI Tests
 
 on:
-  push:
-    branches:
-      - main
-      - master
-
-  pull_request:
-    branches:
-      - main
-      - master
-
   workflow_dispatch:
 
   schedule:
-    # Daily at 10:00 AM CST (16:00 UTC)
+    # 10:00 AM CST / 11:00 AM CDT
     - cron: '0 16 * * *'
 
 jobs:
@@ -37,10 +27,16 @@ jobs:
 
       - name: Set Up Chrome
         uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+          install-dependencies: true
 
-      - name: Verify Chrome Version
+      - name: Verify Environment
         run: |
-          google-chrome --version
+          java -version
+          mvn -version
+          echo "Chrome path: $(which chrome || which google-chrome || true)"
+          chrome --version || google-chrome --version || true
 
       - name: Run Smoke Tests
         run: |
@@ -50,20 +46,20 @@ jobs:
             -Denv=stag \
             -Dcucumber.filter.tags="@Smoke"
 
+      - name: Upload Surefire Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
+          if-no-files-found: ignore
+
       - name: Upload Allure Results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results/
-          if-no-files-found: ignore
-
-      - name: Upload TestNG Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-output
-          path: test-output/
           if-no-files-found: ignore
 
       - name: Upload Screenshots
