@@ -63,6 +63,26 @@ public final class SignUpLoginPage extends BasePage {
         return new MainPage(driver);
     }
 
+    public AccountCreatedPage doLoginAccountCreated(String email, String password) {
+        validateRequiredValue(email, "Email");
+        validateRequiredValue(password, "Password");
+
+        logger.info(" =====> User Sends Keys to Login Email Input: {} <===== ", email);
+
+        type(LOGIN_EMAIL_INPUT, email);
+
+        logger.info(" =====> User Sends Keys to Login Password Input <===== ");
+
+        type(LOGIN_PASSWORD_INPUT, password);
+
+        logger.info(" =====> User Clicks The Login Button <===== ");
+
+        click(LOGIN_BUTTON);
+
+        return new AccountCreatedPage(driver);
+    }
+
+
     public void enterSignUpName(String user) {
         validateRequiredValue(user, "User name");
 

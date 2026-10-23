@@ -1,3 +1,4 @@
 org/example/hooks/Hooks.class
-org/example/steps/MainPageSteps.class
+org/example/steps/RegisterUserSteps.class
+org/example/steps/LoginUserCorrectCredentialsSteps.class
 org/example/runners/RunCucumberTest.class

@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
                 "org.example.steps",
                 "org.example.hooks"
         },
+        tags = "@Smoke",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber.html",

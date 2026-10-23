@@ -4,6 +4,8 @@ target/
 
 .kotlin
 
+*.class
+
 ### IntelliJ IDEA ###
 .idea/
 *.iml
@@ -52,3 +54,4 @@ drivers/
 ### OS ###
 .DS_Store
 Thumbs.db
+

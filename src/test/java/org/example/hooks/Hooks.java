@@ -18,7 +18,7 @@ public class Hooks {
     @Before
     public void setUp() {
         logger.info(" =====> Starting Scenario... <===== ");
-        DriverFactory.setDriver(Constants.DEFAULT_BROWSER, Constants.DEFAULT_HEADLESS);
+        DriverFactory.setDriver();
     }
 
     @After
