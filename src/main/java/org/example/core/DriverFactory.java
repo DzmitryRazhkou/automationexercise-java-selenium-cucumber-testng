@@ -30,13 +30,13 @@ public final class DriverFactory {
         throw new IllegalStateException("DriverFactory cannot be instantiated");
     }
 
-    public static void setDriver(String browser, boolean headless) {
+    public static void setDriver() {
         if (DRIVER.get() != null) {
             throw new IllegalStateException("WebDriver is already initialized for thread: " + Thread.currentThread().threadId());
         }
 
-        String selectedBrowser = browser == null || browser.isBlank() ? Constants.DEFAULT_BROWSER.toLowerCase(Locale.ROOT) : browser.trim().toLowerCase(Locale.ROOT);
-
+        String selectedBrowser = ConfigReader.getBrowser().trim().toLowerCase(Locale.ROOT);
+        boolean headless = ConfigReader.isHeadless();
         logger.info("Initializing browser: {}, headless: {}, thread: {}", selectedBrowser, headless, Thread.currentThread().threadId());
 
         WebDriver driver = switch (selectedBrowser) {
@@ -57,29 +57,45 @@ public final class DriverFactory {
             logger.info("WebDriver initialized successfully for thread: {}", Thread.currentThread().threadId());
         } catch (RuntimeException exception) {
             safelyQuitDriver(driver);
-
             throw new IllegalStateException("Failed to initialize WebDriver for browser: " + selectedBrowser, exception);
         }
     }
 
     private static WebDriver createChromeDriver(boolean headless) {
+
         ChromeOptions options = new ChromeOptions();
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+
+        // Disable Chrome autofill and save suggestions
+        Map<String, Object> prefs = Map.of(
+                "autofill.profile_enabled", false,
+                "autofill.address_enabled", false,
+                "autofill.credit_card_enabled", false,
+                "credentials_enable_service", false,
+                "profile.password_manager_enabled", false
+        );
+
+        options.setExperimentalOption("prefs", prefs);
+
+        // Hide automation banner
+        options.setExperimentalOption(
+                "excludeSwitches",
+                List.of("enable-automation")
+        );
 
         options.addArguments(
                 "--disable-notifications",
                 "--disable-popup-blocking",
                 "--disable-dev-shm-usage",
-                "--no-sandbox"
+                "--no-sandbox",
+                "--disable-features=AutofillAddressProfileSavePrompt"
         );
 
         if (headless) {
             options.addArguments(
                     "--headless=new",
-                    "--window-size=1920,1080",
-                    "--disable-gpu",
-                    "--remote-allow-origins=*"
+                    "--window-size=1920,1080"
             );
         }
 

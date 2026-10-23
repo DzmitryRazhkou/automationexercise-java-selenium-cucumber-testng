@@ -1,3 +1,4 @@
 /Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/java/org/example/hooks/Hooks.java
 /Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/java/org/example/runners/RunCucumberTest.java
-/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/java/org/example/steps/MainPageSteps.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/java/org/example/steps/LoginUserCorrectCredentialsSteps.java
+/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/java/org/example/steps/RegisterUserSteps.java

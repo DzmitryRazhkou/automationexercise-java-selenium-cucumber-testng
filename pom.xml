@@ -12,32 +12,99 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!-- Java and encoding -->
+
+        <!-- ========================= -->
+        <!-- Java / Encoding           -->
+        <!-- ========================= -->
+
         <java.version>21</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- Maven plugins -->
-        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
-        <maven.resources.plugin.version>3.4.0</maven.resources.plugin.version>
-        <maven.surefire.plugin.version>3.3.1</maven.surefire.plugin.version>
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
 
-        <!-- Dependencies -->
+        <project.reporting.outputEncoding>
+            UTF-8
+        </project.reporting.outputEncoding>
+
+
+        <!-- ========================= -->
+        <!-- Maven Plugin Versions     -->
+        <!-- ========================= -->
+
+        <maven.compiler.plugin.version>
+            3.13.0
+        </maven.compiler.plugin.version>
+
+        <maven.resources.plugin.version>
+            3.4.0
+        </maven.resources.plugin.version>
+
+        <maven.surefire.plugin.version>
+            3.3.1
+        </maven.surefire.plugin.version>
+
+
+        <!-- ========================= -->
+        <!-- Dependency Versions       -->
+        <!-- ========================= -->
+
         <selenium.version>4.44.0</selenium.version>
+
         <cucumber.version>7.18.1</cucumber.version>
+
         <testng.version>7.10.2</testng.version>
-        <webdrivermanager.version>5.9.2</webdrivermanager.version>
+
+        <webdrivermanager.version>
+            5.9.2
+        </webdrivermanager.version>
+
         <allure.version>2.29.0</allure.version>
+
         <slf4j.version>2.0.13</slf4j.version>
+
         <logback.version>1.5.6</logback.version>
+
         <faker.version>1.0.2</faker.version>
 
-        <!-- Runtime configuration -->
-        <cucumber.filter.tags>@Smoke</cucumber.filter.tags>
+
+        <!-- ========================= -->
+        <!-- Runtime Defaults          -->
+        <!-- ========================= -->
+
+        <!--
+            Can be overridden:
+            mvn test -Denv=stag
+        -->
         <env>dev</env>
+
+        <!--
+            Can be overridden:
+            mvn test -Dbrowser=firefox
+        -->
         <browser>chrome</browser>
+
+        <!--
+            Can be overridden:
+            mvn test -Dheadless=true
+        -->
         <headless>false</headless>
+
+        <!--
+            Default Cucumber execution.
+            Plain "mvn test" will run @Smoke.
+
+            Override:
+            mvn test -Dcucumber.filter.tags="@Regression"
+        -->
+        <cucumber.filter.tags>@Smoke</cucumber.filter.tags>
+
     </properties>
+
+
+    <!-- ================================================= -->
+    <!-- Dependencies                                      -->
+    <!-- ================================================= -->
 
     <dependencies>
 
@@ -48,6 +115,7 @@
             <version>${selenium.version}</version>
         </dependency>
 
+
         <!-- Cucumber Java -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -56,13 +124,15 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Cucumber TestNG -->
+
+        <!-- Cucumber + TestNG -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+
 
         <!-- TestNG -->
         <dependency>
@@ -72,19 +142,22 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Faker -->
+
+        <!-- Java Faker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>${faker.version}</version>
         </dependency>
 
-        <!-- WebDriverManager -->
+
+        <!-- WebDriver Manager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
         </dependency>
+
 
         <!-- Allure Cucumber -->
         <dependency>
@@ -94,14 +167,16 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- SLF4J -->
+
+        <!-- Logging API -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
 
-        <!-- Logback -->
+
+        <!-- Logging Implementation -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -110,47 +185,123 @@
 
     </dependencies>
 
+
+    <!-- ================================================= -->
+    <!-- Build                                             -->
+    <!-- ================================================= -->
+
     <build>
+
         <plugins>
 
-            <!-- Java 21 Compiler -->
+            <!-- ========================= -->
+            <!-- Java 21 Compiler          -->
+            <!-- ========================= -->
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
+
+                <groupId>
+                    org.apache.maven.plugins
+                </groupId>
+
+                <artifactId>
+                    maven-compiler-plugin
+                </artifactId>
+
+                <version>
+                    ${maven.compiler.plugin.version}
+                </version>
 
                 <configuration>
-                    <release>${java.version}</release>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+
+                    <release>
+                        ${java.version}
+                    </release>
+
+                    <encoding>
+                        ${project.build.sourceEncoding}
+                    </encoding>
+
                 </configuration>
+
             </plugin>
 
-            <!-- UTF-8 Resources -->
+
+            <!-- ========================= -->
+            <!-- UTF-8 Resources           -->
+            <!-- ========================= -->
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>${maven.resources.plugin.version}</version>
+
+                <groupId>
+                    org.apache.maven.plugins
+                </groupId>
+
+                <artifactId>
+                    maven-resources-plugin
+                </artifactId>
+
+                <version>
+                    ${maven.resources.plugin.version}
+                </version>
 
                 <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+
+                    <encoding>
+                        ${project.build.sourceEncoding}
+                    </encoding>
+
                 </configuration>
+
             </plugin>
 
-            <!-- Surefire runs TestNG XML -->
+
+            <!-- ========================= -->
+            <!-- Test Execution            -->
+            <!-- ========================= -->
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.plugin.version}</version>
+
+                <groupId>
+                    org.apache.maven.plugins
+                </groupId>
+
+                <artifactId>
+                    maven-surefire-plugin
+                </artifactId>
+
+                <version>
+                    ${maven.surefire.plugin.version}
+                </version>
 
                 <configuration>
+
+                    <!-- TestNG suite -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>
+                            testng.xml
+                        </suiteXmlFile>
                     </suiteXmlFiles>
 
+
+                    <!--
+                        Pass Maven properties
+                        to the test JVM.
+                    -->
                     <systemPropertyVariables>
-                        <env>${env}</env>
-                        <browser>${browser}</browser>
-                        <headless>${headless}</headless>
+
+                        <env>
+                            ${env}
+                        </env>
+
+                        <browser>
+                            ${browser}
+                        </browser>
+
+                        <headless>
+                            ${headless}
+                        </headless>
+
                         <cucumber.filter.tags>
                             ${cucumber.filter.tags}
                         </cucumber.filter.tags>
@@ -158,13 +309,21 @@
                         <java.util.logging.config.file>
                             ${project.basedir}/src/test/resources/logging.properties
                         </java.util.logging.config.file>
+
                     </systemPropertyVariables>
 
-                    <testFailureIgnore>false</testFailureIgnore>
+
+                    <!-- Fail Maven build if tests fail -->
+                    <testFailureIgnore>
+                        false
+                    </testFailureIgnore>
+
                 </configuration>
+
             </plugin>
 
         </plugins>
+
     </build>
 
 </project>

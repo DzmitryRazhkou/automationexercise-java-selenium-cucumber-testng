@@ -14,18 +14,15 @@ import org.example.pages.SignUpLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import java.io.FileNotFoundException;
-
-public class MainPageSteps {
+public class RegisterUserSteps {
 
     private final CustomerInfo customer;
     private MainPage mainPage;
     private SignUpLoginPage signUpLoginPage;
     private AccountInformationPage accountInformationPage;
     private AccountCreatedPage accountCreatedPage;
-    private String password;
 
-    public MainPageSteps() {
+    public RegisterUserSteps() {
         this.customer = CustomerDataFactory.generateCustomer();
     }
 
@@ -107,7 +104,7 @@ public class MainPageSteps {
 
     @When("the user enters valid account information")
     public void the_user_enters_valid_account_information() {
-        password = accountInformationPage.generatePassword(10);
+        String password = accountInformationPage.generatePassword(10);
         accountInformationPage.selectRandomGender();
         accountInformationPage.enterPassword(password);
         accountInformationPage.doSelectDOB();

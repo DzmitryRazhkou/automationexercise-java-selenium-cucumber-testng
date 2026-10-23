@@ -28,4 +28,9 @@ public final class AccountCreatedPage extends BasePage {
         return new MainPage(driver);
     }
 
+    public boolean verifyTheLoggedInUsername(String userName) {
+        By locator = By.xpath("//b[contains(normalize-space(.), '" + userName + "')]");
+        return verifyTextContent(locator, userName);
+    }
+
 }
