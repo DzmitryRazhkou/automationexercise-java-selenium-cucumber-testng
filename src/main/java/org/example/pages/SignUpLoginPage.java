@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public final class SignUpLoginPage extends BasePage {
 
+    private static final By NEW_USER_FORM = By.xpath("//div[@class='signup-form']");
     private static final By NEW_USER_SIGN_UP_HEADING = By.xpath("//h2[normalize-space()='New User Signup!']");
+    private static final By LOGIN_TO_YOUR_ACCOUNT_FORM = By.xpath("//div[@class='login-form']");
     private static final By NAME_INPUT = By.cssSelector("input[data-qa='signup-name']");
     private static final By SIGN_UP_EMAIL_INPUT = By.cssSelector("input[data-qa='signup-email']");
     private static final By SIGN_UP_BUTTON = By.cssSelector("button[data-qa='signup-button']");
@@ -15,6 +17,8 @@ public final class SignUpLoginPage extends BasePage {
     private static final By LOGIN_BUTTON = By.cssSelector("button[data-qa='login-button']");
     private static final By SIGN_UP_ERROR_MESSAGE = By.xpath("//p[normalize-space()='Email Address already exist!']");
     private static final By LOGIN_ERROR_MESSAGE = By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
+    private static final By ERROR_MSG = By.xpath("//p[contains(text(), 'Your email or password is incorrect!')]");
+    private static final By ERROR_MSG_EMAIL_ADDRESS_ALREADY_EXIST = By.xpath("//p[contains(text(), 'Email Address already exist!')]");
 
     public SignUpLoginPage(WebDriver driver) {
         super(driver);
@@ -171,5 +175,18 @@ public final class SignUpLoginPage extends BasePage {
         if (value == null || value.isBlank()) {
             throw new IllegalArgumentException(fieldName + " cannot be null or blank");
         }
+    }
+
+    public boolean verifyErrorMsg() {
+        logger.info(" =====> User Verifies That 'Account Created' Message is 'Your email or password is incorrect!' <===== ");
+        return verifyTextContent(ERROR_MSG, "Your email or password is incorrect!");
+    }
+
+    public boolean isLoginToYourFormDisplayed() {
+        return isVisible(LOGIN_TO_YOUR_ACCOUNT_FORM);
+    }
+
+    public boolean isNewUserFormDisplayed() {
+        return isVisible(NEW_USER_FORM);
     }
 }

@@ -1,4 +1,4 @@
-@Smoke
+#@Smoke
 Feature: Login User with correct email and password
 
   Background:

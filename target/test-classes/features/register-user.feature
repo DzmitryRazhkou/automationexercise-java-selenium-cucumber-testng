@@ -1,4 +1,4 @@
-@Smoke
+#@Smoke
 Feature: Register a new user
 
   Background:

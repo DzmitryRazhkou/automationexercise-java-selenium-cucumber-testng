@@ -2,14 +2,7 @@ package org.example.pages;
 
 import org.example.constants.Constants;
 import org.example.utils.WaitUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -358,5 +351,36 @@ public abstract class BasePage {
 
         logger.debug("Expected: [{}] | Actual: [{}]", expectedText, actualText);
         return actualText.equals(expectedText);
+    }
+
+    protected boolean isVisible(By locator) {
+        try {
+            logger.debug("Waiting for visibility of element: {}", locator);
+
+            boolean visible = wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+
+            logger.debug("Element is visible: {}", locator);
+            return visible;
+
+        } catch (StaleElementReferenceException stale) {
+
+            logger.warn("Stale element detected, retrying: {}", locator);
+
+            try {
+                // Retry once after DOM refresh
+                boolean visible = wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(locator))).isDisplayed();
+
+                logger.debug("Element visible after retry: {}", locator);
+                return visible;
+
+            } catch (Exception retryException) {
+                logger.warn("Element still not visible after retry: {}", locator);
+                return false;
+            }
+
+        } catch (java.util.NoSuchElementException | TimeoutException exception) {
+            logger.warn("Element NOT visible after {} seconds: {}", Constants.WEB_DRIVER_WAIT_TIMEOUT, locator);
+            return false;
+        }
     }
 }
