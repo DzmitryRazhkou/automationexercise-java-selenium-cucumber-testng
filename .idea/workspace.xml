@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22efb80b-6a07-4589-b082-f6474cfdff48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/LoginUserCorrectCredentialsSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/login-user-correct-credentials.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/smoke-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/smoke-tests.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/LoginUserIncorrectCredentialsSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/LogoutUserSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/login-user-incorrect-credentials.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/logout-user.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/AccountCreatedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/AccountCreatedPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/SignUpLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/SignUpLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runners/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runners/RunCucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/MainPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/RegisterUserSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/stag.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/stag.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/core/ConfigReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/core/ConfigReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/core/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/core/DriverFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login-user-correct-credentials.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login-user-correct-credentials.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/register-user.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/register-user.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/constants/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/constants/Constants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/pages/AccountCreatedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/pages/AccountCreatedPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/pages/BasePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/pages/SignUpLoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/pages/SignUpLoginPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber.json" afterDir="false" />
@@ -36,13 +32,7 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.example.runners.RunCucumberTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.example.runners.RunCucumberTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config/dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config/dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config/prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config/prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config/stag.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config/stag.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/hooks/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/runners/RunCucumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/runners/RunCucumberTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/MainPageSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/register-user.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/register-user.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +50,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/org/example/steps/LogoutUserSteps.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/test/resources/features/login-user-correct-credentials.feature" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/resources/features/login-user-incorrect-credentials.feature" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/resources/features/logout-user.feature" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/test/resources/features/register-user.feature" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -71,24 +64,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test/github-actions&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "test/login-incorrect-user",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/dzmitryrazhkou/Documents/Automation/Selenium | Cucumber/automationexercise-java-selenium-cucumber-testng/src/test/resources/features",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/features" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.steps" />
     </key>
   </component>
   <component name="RunManager">

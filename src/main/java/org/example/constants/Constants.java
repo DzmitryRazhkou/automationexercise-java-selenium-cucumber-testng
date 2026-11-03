@@ -13,7 +13,7 @@ public final class Constants {
     public static final Duration EXPLICIT_WAIT = Duration.ofSeconds(15);
     public static final String CONFIG_PATH = "config/%s.properties";
     public static final String SCREENSHOTS_DIR = "target/screenshots/";
-
+    public static final long WEB_DRIVER_WAIT_TIMEOUT = 10;
 
     public static final Duration SHORT_WAIT = Duration.ofSeconds(5);
     public static final Duration LONG_WAIT = Duration.ofSeconds(30);
